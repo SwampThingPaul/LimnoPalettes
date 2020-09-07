@@ -1,5 +1,5 @@
 Package: LimnoPalettes
-Title: A Limnology themed Palette Generator
+Title: A Limnology Themed Palette Generator
 Description: Palettes generated from limnology based field and laboratory photos.
 Date: 2020-09-05
 Version: 0.1.0
@@ -7,7 +7,7 @@ Authors@R: c(person("Paul", "Julian", role = c("aut", "cre"),
     email = "pauljulianphd@gmail.com", comment = c(ORCID = "0000-0002-7617-1354")))
 Depends:
     R (>= 3.0)
-License: MIT + file LICENSE
+License: MIT License + file LICENSE
 LazyData: true
 URL: https://github.com/SwampThingPaul/LimnoPalettes
 BugReports: https://github.com/SwampThingPaul/LimnoPalettes/issues

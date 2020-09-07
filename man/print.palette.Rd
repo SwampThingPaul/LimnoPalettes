@@ -4,7 +4,12 @@
 \alias{print.palette}
 \title{Print a palette}
 \usage{
-\method{print}{palette}(x, txt.cex, ...)
+\method{print}{palette}(x, ...)
+}
+\arguments{
+\item{x}{Desired palette}
+
+\item{...}{further arguments passed to or from other methods.}
 }
 \description{
 Print a palette

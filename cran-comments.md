@@ -12,6 +12,5 @@
   unable to verify current time
 ```
 
-
 ### devtools::check_rhub() locally:
-
+0 errors √ | 0 warnings √ | 1 note x

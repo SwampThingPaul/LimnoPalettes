@@ -7,13 +7,17 @@ editor_options:
 
 ```{r setup, include=FALSE}
 knitr::opts_chunk$set(echo = TRUE)
+knitr::opts_chunk$set(
+  fig.path = "man/figures/"
+)
 ```
 
 ## Table of Contents
 
 * [Citing package](#cite)
 * [Installation](#install)
-* [Examples](#examp)
+* [Palettes](#examp)
+* [Working Examples](#workexamp)
 
 Code and general idea inspired by the ["Wes Anderson Palettes"](https://github.com/karthik/wesanderson) R-Package.
 
@@ -42,7 +46,7 @@ im=load.image("./images/SummerIowaLakes_GWilkinson.jpg")
 par(family="serif",mar=c(0,0,0,0))
 layout(matrix(1:3,3,1),heights=c(1,1,0.25))
 plot(im,ann=F,axes=F)
-print.palette(limno_palette("IowaSummer"),txt.cex=2)
+print(limno_palette("IowaSummer"),cex=2)
 plot(0:1,0:1,ann=F,axes=F,type="n")
 text(0,0.5,"Photo Credit: Grace Wilkinson (Twitter: goodgracious23)",adj=0)
 ```
@@ -53,7 +57,7 @@ im=load.image("./images/PeriphytonFA_MMeyer.jpg")
 par(family="serif",mar=c(0,0,0,0))
 layout(matrix(1:3,3,1),heights=c(1,1,0.25))
 plot(im,ann=F,axes=F)
-print.palette(limno_palette("PeriFA"),txt.cex=2)
+print(limno_palette("PeriFA"),cex=2)
 plot(0:1,0:1,ann=F,axes=F,type="n")
 text(0,0.5,"Photo Credit: Michael Meyer (Twitter: mishafredmeyer)",adj=0)
 ```
@@ -64,7 +68,7 @@ im=load.image("./images/Bloom1_SBurnet.jpg")
 par(family="serif",mar=c(0,0,0,0))
 layout(matrix(1:3,3,1),heights=c(1,1,0.25))
 plot(im,ann=F,axes=F)
-print.palette(limno_palette("Bloom1"),txt.cex=2)
+print(limno_palette("Bloom1"),cex=2)
 plot(0:1,0:1,ann=F,axes=F,type="n")
 text(0,0.5,"Photo Credit: Sarah Burnet (Twitter: limnosarah)",adj=0)
 ```
@@ -75,7 +79,7 @@ im=load.image("./images/Bloom2_SBurnet.jpg")
 par(family="serif",mar=c(0,0,0,0))
 layout(matrix(1:3,3,1),heights=c(1,1,0.25))
 plot(im,ann=F,axes=F)
-print.palette(limno_palette("Bloom2"),txt.cex=2)
+print(limno_palette("Bloom2"),cex=2)
 plot(0:1,0:1,ann=F,axes=F,type="n")
 text(0,0.5,"Photo Credit: Sarah Burnet (Twitter: limnosarah)",adj=0)
 ```
@@ -86,7 +90,7 @@ im=load.image("./images/LakeSuperiorIce_SBurnet.jpg")
 par(family="serif",mar=c(0,0,0,0))
 layout(matrix(1:3,3,1),heights=c(1,1,0.25))
 plot(im,ann=F,axes=F)
-print.palette(limno_palette("SuperIce"),txt.cex=2)
+print(limno_palette("SuperIce"),cex=2)
 plot(0:1,0:1,ann=F,axes=F,type="n")
 text(0,0.5,"Photo Credit: Sarah Burnet (Twitter: limnosarah)",adj=0)
 ```
@@ -97,7 +101,7 @@ im=load.image("./images/FlatheadLake_PJulian.jpg")
 par(family="serif",mar=c(0,0,0,0))
 layout(matrix(1:3,3,1),heights=c(1,1,0.25))
 plot(im,ann=F,axes=F)
-print.palette(limno_palette("FlatheadRocks"),txt.cex=2)
+print(limno_palette("FlatheadRocks"),cex=2)
 plot(0:1,0:1,ann=F,axes=F,type="n")
 text(0,0.5,"Photo Credit: Paul Julian (Twitter: SwampThingPaul)",adj=0)
 ```
@@ -108,7 +112,7 @@ im=load.image("./images/ShelburnePond_LBorre.jpg")
 par(family="serif",mar=c(0,0,0,0))
 layout(matrix(1:3,3,1),heights=c(1,1,0.25))
 plot(im,ann=F,axes=F)
-print.palette(limno_palette("ShelburnePond"),txt.cex=2)
+print(limno_palette("ShelburnePond"),cex=2)
 plot(0:1,0:1,ann=F,axes=F,type="n")
 text(0,0.5,"Photo Credit: Lisa Borre (Twitter: lisa_borre)",adj=0)
 ```
@@ -119,7 +123,7 @@ im=load.image("./images/wetsoil_RKBhomia.jpg")
 par(family="serif",mar=c(0,0,0,0))
 layout(matrix(1:3,3,1),heights=c(1,1,0.25))
 plot(im,ann=F,axes=F)
-print.palette(limno_palette("WetSoil"),txt.cex=2)
+print(limno_palette("WetSoil"),cex=2)
 plot(0:1,0:1,ann=F,axes=F,type="n")
 text(0,0.5,"Photo Credit: Rupesh K Bhomia (Twitter: RupeshKBhomia)",adj=0)
 ```
@@ -130,9 +134,76 @@ im=load.image("./images/OrdRiverWA_CFowler.jpg")
 par(family="serif",mar=c(0,0,0,0))
 layout(matrix(1:3,3,1),heights=c(1,1,0.25))
 plot(im,ann=F,axes=F)
-print.palette(limno_palette("OrdRiver"),txt.cex=2)
+print(limno_palette("OrdRiver"),cex=2)
 plot(0:1,0:1,ann=F,axes=F,type="n")
 text(0,0.5,"Photo Credit: Courtney Fowler (Twitter: courtzfowler)",adj=0)
+```
+
+***
+
+## Working Examples. <a name="workexamp"></a>
+
+```{r examp1,fig.height=4,fig.width=6}
+set.seed(1)
+dat <- data.frame(Group=c(rep("A",10),rep("B",10),rep("C",10),rep("D",10)),
+                  var1=rnorm(40),var2=runif(40,1,15),var3=rpois(40,3))
+
+cols <- limno_palette("SuperIce",4)
+boxplot(var2~Group,dat, col=cols)
+```
+```{r examp2,fig.height=4,fig.width=6}
+cols <- limno_palette("IowaSummer",4,"continuous")
+cols2 <- cols[dat$Group]
+plot(var2~var3,dat,pch=21,bg=cols2,cex=2)
+```
+
+```{r examp3,fig.height=4,fig.width=6}
+cols <- limno_palette("PeriFA",4,"continuous")
+barplot(aggregate(dat$var3,list(dat$Group),mean)$x,names.arg=unique(dat$Group),ylim=c(0,4),col=cols)
+
+```
+
+While not a part of this package, for data visualization purposes it would be a good idea to see how these colors are perceived for people with color blindness. 
+
+```{r,fig.width=9,fig.height=7,warning=FALSE}
+library(colorBlindness)
+mat <- matrix(1:81, nrow = 9, ncol = 9)
+
+library(ggplot2)
+library(reshape2)
+cols <- limno_palette("IowaSummer")
+
+mat1 <- melt(t(mat[9:1, ]))
+len <- length(cols)-1
+mat1$v2 <- cut(mat1$value,
+              breaks = seq(0,ceiling(81/len)*len, 
+                           length.out = len+1))
+ht <- ggplot(mat1) + 
+  geom_tile(aes(x=Var1, y=Var2, fill=v2)) + 
+  scale_fill_manual(values=cols) + 
+  theme_bw()
+
+# check the plot by CVD simulator
+cvdPlot(ht)
+```
+
+
+```{r,fig.width=9,fig.height=7}
+# Second Example
+cols <- limno_palette("Bloom2",10, "continuous")
+
+mat1 <- melt(t(mat[9:1, ]))
+len <- length(cols)-1
+mat1$v2 <- cut(mat1$value,
+              breaks = seq(0,ceiling(81/len)*len, 
+                           length.out = len+1))
+ht <- ggplot(mat1) + 
+  geom_tile(aes(x=Var1, y=Var2, fill=v2)) + 
+  scale_fill_manual(values=cols) + 
+  theme_bw()
+
+# check the plot by CVD simulator
+cvdPlot(ht)
 ```
 
 ***

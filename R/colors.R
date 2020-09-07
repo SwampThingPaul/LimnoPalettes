@@ -64,10 +64,14 @@ limno_palette <- function(name, n, type = c("discrete", "continuous")) {
 
 #' Print a palette
 #' 
-#' @export print.palette
+#' @param x Desired palette
+#' @param ... further arguments passed to or from other methods. 
+#' 
+#' @export 
 #' @importFrom graphics rect par image text
 #' @importFrom grDevices rgb
-print.palette <- function(x, txt.cex,...) {
+#' 
+print.palette <- function(x, ...) {
   n <- length(x)
   old <- par(mar = c(0.5, 0.5, 0.5, 0.5))
   on.exit(par(old))
@@ -76,6 +80,6 @@ print.palette <- function(x, txt.cex,...) {
         ylab = "", xaxt = "n", yaxt = "n", bty = "n")
   
   rect(0, 0.9, n + 1, 1.1, col = rgb(1, 1, 1, 0.8), border = NA)
-  text((n + 1) / 2, 1, labels = attr(x, "name"), cex = txt.cex, family = "serif")
+  text((n + 1) / 2, 1, labels = attr(x, "name"),...)
   
 }

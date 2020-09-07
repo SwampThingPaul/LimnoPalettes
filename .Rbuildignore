@@ -6,6 +6,7 @@
 ^.*\.Rproj$
 ^\.Rproj\.user$
 ^README\.Rmd$
+^README_files\.*$
 
 ^build.R
 
