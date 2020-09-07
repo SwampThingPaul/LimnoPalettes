@@ -130,18 +130,55 @@
 <a href="#working-examples-" class="anchor"></a>Working Examples. <a name="workexamp"></a>
 </h2>
 <div class="sourceCode" id="cb4"><pre class="r">set.seed(1)
-dat </pre></div>
+dat = data.frame(Group=c(rep("A",10),rep("B",10),rep("C",10),rep("D",10)),
+                  var1=rnorm(40),var2=runif(40,1,15),var3=rpois(40,3))
+
+cols = limno_palette("SuperIce",4)
+boxplot(var2~Group,dat, col=cols)</pre></div>
 <p><img src="reference/figures/examp1-1.png"><!-- --></p>
-<div class="sourceCode" id="cb5"><pre class="r">cols </pre></div>
+<div class="sourceCode" id="cb5"><pre class="r">cols = limno_palette("IowaSummer",4,"continuous")
+cols2 = cols[dat$Group]
+plot(var2~var3,dat,pch=21,bg=cols2,cex=2)</pre></div>
 <p><img src="reference/figures/examp2-1.png"><!-- --></p>
-<div class="sourceCode" id="cb6"><pre class="r">cols </pre></div>
+<div class="sourceCode" id="cb6"><pre class="r">cols = limno_palette("PeriFA",4,"continuous")
+barplot(aggregate(dat$var3,list(dat$Group),mean)$x,names.arg=unique(dat$Group),ylim=c(0,4),col=cols)</pre></div>
 <p><img src="reference/figures/examp3-1.png"><!-- --></p>
 <p>While not a part of this package, for data visualization purposes it would be a good idea to see how these colors are perceived for people with color blindness.</p>
 <div class="sourceCode" id="cb7"><pre class="r">library(colorBlindness)
-mat </pre></div>
+mat = matrix(1:81, nrow = 9, ncol = 9)
+
+library(ggplot2)
+library(reshape2)
+cols = limno_palette("IowaSummer")
+
+mat1 = melt(t(mat[9:1, ]))
+len = length(cols)-1
+mat1$v2 = cut(mat1$value,
+              breaks = seq(0,ceiling(81/len)*len, 
+                           length.out = len+1))
+ht = ggplot(mat1) + 
+  geom_tile(aes(x=Var1, y=Var2, fill=v2)) + 
+  scale_fill_manual(values=cols) + 
+  theme_bw()
+
+# check the plot by CVD simulator
+cvdPlot(ht)</pre></div>
 <p><img src="reference/figures/unnamed-chunk-3-1.png"><!-- --></p>
 <div class="sourceCode" id="cb8"><pre class="r"># Second Example
-cols </pre></div>
+cols = limno_palette("Bloom2",10, "continuous")
+
+mat1 = melt(t(mat[9:1, ]))
+len = length(cols)-1
+mat1$v2 = cut(mat1$value,
+              breaks = seq(0,ceiling(81/len)*len, 
+                           length.out = len+1))
+ht = ggplot(mat1) + 
+  geom_tile(aes(x=Var1, y=Var2, fill=v2)) + 
+  scale_fill_manual(values=cols) + 
+  theme_bw()
+
+# check the plot by CVD simulator
+cvdPlot(ht)</pre></div>
 <p><img src="reference/figures/unnamed-chunk-4-1.png"><!-- --></p>
 <hr>
 </div>
