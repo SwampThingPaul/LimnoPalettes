@@ -21,3 +21,6 @@ devtools::check_rhub()
 
 ## Builds package down webpage
 pkgdown::build_site()
+
+##
+devtools::build()
