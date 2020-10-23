@@ -21,7 +21,7 @@ citation('LimnoPalettes')
     ## To cite package 'LimnoPalettes' in publications use:
     ## 
     ##   Paul Julian (2020). LimnoPalettes: A Limnology Themed Palette
-    ##   Generator. R package version 0.1.0.
+    ##   Generator. R package version 0.1.1.
     ##   https://github.com/SwampThingPaul/LimnoPalettes
     ## 
     ## A BibTeX entry for LaTeX users is
@@ -30,7 +30,7 @@ citation('LimnoPalettes')
     ##     title = {LimnoPalettes: A Limnology Themed Palette Generator},
     ##     author = {Paul Julian},
     ##     year = {2020},
-    ##     note = {R package version 0.1.0},
+    ##     note = {R package version 0.1.1},
     ##     url = {https://github.com/SwampThingPaul/LimnoPalettes},
     ##   }
 
@@ -60,6 +60,11 @@ devtools::install_github("SwampThingPaul/LimnoPalettes")
 ![](man/figures/WetSoil-1.png)<!-- -->
 
 ![](man/figures/OrdRiver-1.png)<!-- -->
+
+![](man/figures/WA%20Salt%20Lakes%20-1.png)<!-- -->
+
+Image shared on [ABC Midwest and Wheatbelt Facebook
+Page](https://www.facebook.com/abcmidwestandwheatbelt/photos/a.321716205984/10158416054510985/)
 
 -----
 
