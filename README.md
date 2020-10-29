@@ -36,6 +36,15 @@ citation('LimnoPalettes')
 
 ## Installation <a name="install"></a>
 
+Version `0.1.0` is offically on
+[CRAN](https://cran.r-project.org/web/packages/LimnoPalettes/index.html)
+
+``` r
+install.packages("LimnoPalettes")
+```
+
+Development version can be installed from this repo.
+
 ``` r
 install.packages("devtools");# if you do not have it installed on your PC
 devtools::install_github("SwampThingPaul/LimnoPalettes")
@@ -122,7 +131,7 @@ ht = ggplot(mat1) +
 cvdPlot(ht)
 ```
 
-![](man/figures/unnamed-chunk-3-1.png)<!-- -->
+![](man/figures/unnamed-chunk-4-1.png)<!-- -->
 
 ``` r
 # Second Example
@@ -142,6 +151,6 @@ ht = ggplot(mat1) +
 cvdPlot(ht)
 ```
 
-![](man/figures/unnamed-chunk-4-1.png)<!-- -->
+![](man/figures/unnamed-chunk-5-1.png)<!-- -->
 
 -----

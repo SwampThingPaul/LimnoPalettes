@@ -29,6 +29,14 @@ citation('LimnoPalettes')
 
 ## Installation <a name="install"></a>
 
+Version `0.1.0` is offically on [CRAN](https://cran.r-project.org/web/packages/LimnoPalettes/index.html)
+
+```{r,eval=F}
+install.packages("LimnoPalettes")
+```
+
+Development version can be installed from this repo. 
+
 ```{r,eval=F}
 install.packages("devtools");# if you do not have it installed on your PC
 devtools::install_github("SwampThingPaul/LimnoPalettes")
