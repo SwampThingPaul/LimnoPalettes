@@ -14,10 +14,10 @@ roxygen2md::roxygen2md()
 
 devtools::document()
 
-devtools::check()
+# devtools::check()
 
 ##
-devtools::check_rhub()
+# devtools::check_rhub()
 
 ## Builds package down webpage
 pkgdown::build_site()

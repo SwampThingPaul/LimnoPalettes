@@ -10,7 +10,7 @@ limno_palette(name, n, type = c("discrete", "continuous"))
 \item{name}{Name of desired palette. Choices are:
 \code{IowaSummer}, \code{PeriFA},  \code{Bloom1},
 \code{Bloom2}, \code{SuperIce},  \code{FlatheadRocks}, \code{ShelburnePond},
-\code{WetSoil},\code{OrdRiver},\code{WASaltLake}}
+\code{WetSoil},\code{OrdRiver},\code{WASaltLake},\code{EutroRes}}
 
 \item{n}{Number of colors desired. All color
 schemes are derived from photos provided by contributors to this
