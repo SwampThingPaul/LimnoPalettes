@@ -14,7 +14,8 @@ limno_palettes <- list(
   ShelburnePond = c("#E1EBF4", "#D1DCE7", "#A6B0BA", "#8C97A1", "#5C666D", "#475158", "#30363F"),
   WetSoil = c("#4B3627", "#150F0B", "#31261D", "#624C3A", "#978467", "#AEA190","#6F655C", "#EDE5DB"),
   OrdRiver = c("#193F15", "#497540", "#789F6C", "#A3BB98", "#C3D7BC", "#EBF7E7","#56E4BF", "#2DD8AE"),
-  WASaltLake=c("#99918B", "#D8C8C5", "#B5AAA9", "#544E4F", "#7B7674", "#8C93AB","#5C8B96", "#3A6378")
+  WASaltLake=c("#99918B", "#D8C8C5", "#B5AAA9", "#544E4F", "#7B7674", "#8C93AB","#5C8B96", "#3A6378"),
+  EutroRes=c("#8C887E", "#ABA79D", "#CAC7BC", "#EDDCB3", "#D5BD90", "#6B675F","#634F3A", "#4D3B28", "#362617")
 )
 
 #' A Limnology palette generator
@@ -28,7 +29,7 @@ limno_palettes <- list(
 #' @param name Name of desired palette. Choices are:
 #'   `IowaSummer`, `PeriFA`,  `Bloom1`,
 #'   `Bloom2`, `SuperIce`,  `FlatheadRocks`, `ShelburnePond`,
-#'   `WetSoil`,`OrdRiver`,`WASaltLake`
+#'   `WetSoil`,`OrdRiver`,`WASaltLake`,`EutroRes`
 #' @param type Either "continuous" or "discrete". Use continuous if you want
 #'   to automatically interpolate between colours.
 #'   @importFrom graphics rgb rect par image text

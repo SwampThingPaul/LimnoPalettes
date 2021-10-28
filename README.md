@@ -3,10 +3,10 @@ LimnoPalettes
 
 ## Table of Contents
 
-  - [Citing package](#cite)
-  - [Installation](#install)
-  - [Palettes](#examp)
-  - [Working Examples](#workexamp)
+-   [Citing package](#cite)
+-   [Installation](#install)
+-   [Palettes](#examp)
+-   [Working Examples](#workexamp)
 
 Code and general idea inspired by the [“Wes Anderson
 Palettes”](https://github.com/karthik/wesanderson) R-Package.
@@ -70,12 +70,13 @@ devtools::install_github("SwampThingPaul/LimnoPalettes")
 
 ![](man/figures/OrdRiver-1.png)<!-- -->
 
-![](man/figures/WA%20Salt%20Lakes%20-1.png)<!-- -->
-
-Image shared on [ABC Midwest and Wheatbelt Facebook
+![](man/figures/WA%20Salt%20Lakes%20-1.png)<!-- --> Image shared on [ABC
+Midwest and Wheatbelt Facebook
 Page](https://www.facebook.com/abcmidwestandwheatbelt/photos/a.321716205984/10158416054510985/)
 
------
+<br> ![](man/figures/EutroRes%20-1.png)<!-- -->
+
+------------------------------------------------------------------------
 
 ## Working Examples. <a name="workexamp"></a>
 
@@ -153,4 +154,4 @@ cvdPlot(ht)
 
 ![](man/figures/unnamed-chunk-5-1.png)<!-- -->
 
------
+------------------------------------------------------------------------
