@@ -52,29 +52,59 @@ devtools::install_github("SwampThingPaul/LimnoPalettes")
 
 ## Now Presenting… <a name="examp"></a>
 
+### IowaSummer
+
 ![](man/figures/iowa-1.png)<!-- -->
+
+### PeriFA
 
 ![](man/figures/PeriFA-1.png)<!-- -->
 
+### Bloom1
+
 ![](man/figures/Bloom1-1.png)<!-- -->
+
+### Bloom2
 
 ![](man/figures/Bloom2-1.png)<!-- -->
 
+### SuperIce
+
 ![](man/figures/SuperIce-1.png)<!-- -->
+
+### FlatheadRocks
 
 ![](man/figures/FlatheadRocks-1.png)<!-- -->
 
+### ShelburnePond
+
 ![](man/figures/ShelburnePond-1.png)<!-- -->
+
+### WetSoil
 
 ![](man/figures/WetSoil-1.png)<!-- -->
 
+### OrdRiver
+
 ![](man/figures/OrdRiver-1.png)<!-- -->
+
+### WASaltLake
 
 ![](man/figures/WA%20Salt%20Lakes%20-1.png)<!-- --> Image shared on [ABC
 Midwest and Wheatbelt Facebook
 Page](https://www.facebook.com/abcmidwestandwheatbelt/photos/a.321716205984/10158416054510985/)
 
-<br> ![](man/figures/EutroRes%20-1.png)<!-- -->
+### EutroRes
+
+![](man/figures/EutroRes%20-1.png)<!-- -->
+
+### AbiskoSed1
+
+![](man/figures/AbiskoSed1%20-1.png)<!-- -->
+
+### AbiskoSed2
+
+![](man/figures/AbiskoSed2%20-1.png)<!-- -->
 
 ------------------------------------------------------------------------
 
@@ -84,6 +114,7 @@ Page](https://www.facebook.com/abcmidwestandwheatbelt/photos/a.321716205984/1015
 set.seed(1)
 dat = data.frame(Group=c(rep("A",10),rep("B",10),rep("C",10),rep("D",10)),
                   var1=rnorm(40),var2=runif(40,1,15),var3=rpois(40,3))
+dat$Group=factor(dat$Group,levels=c("A","B","C","D"))
 
 cols = limno_palette("SuperIce",4)
 boxplot(var2~Group,dat, col=cols)
